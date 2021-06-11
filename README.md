@@ -1,3 +1,6 @@
+## Team Members
+Hajra Rizvi s991627316
+Gurwinder Kaur s991340033
 ## Link https://github.com/GurwinderKaur0033/Group3War
 ## Group3War 🂡
 This project is a demonstrating a card game called War 
