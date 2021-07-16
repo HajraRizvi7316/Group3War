@@ -8,8 +8,10 @@ package ca.sheridancollege.project;
 
 /**
  * Author: Hajra Rizvi
- * Date: 
+ * Date: 07/15/2021
  */
+
+//enum class for Rank
 public enum Rank {
     ACE("Ace", 1),
     TWO("2", 2),
@@ -25,13 +27,17 @@ public enum Rank {
     QUEEN("Queen", 12), 
     KING("King", 13);
     
+    //declare value and name
     int value;
     String name;
+    
+    //Constructor with two arguments
     Rank(String name, int value){
         this.name=name;
         this.value = value;
     }
     
+    //toString method
     @Override
     public String toString(){
         return name;

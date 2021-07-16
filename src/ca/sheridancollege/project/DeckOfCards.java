@@ -6,44 +6,30 @@
 package ca.sheridancollege.project;
 
 import java.util.ArrayList;
-import java.util.Random;
-import ca.sheridancollege.project.Card;
 
 /**
  * Author: HajraRizvi Date:
  */
 public class DeckOfCards extends GroupOfCards {
 
-    
-    
-    private Suit cardSuit[];
-    private Rank cardRank[];
-    
-    
-
-    public DeckOfCards(Suit suit[], Rank rank[], int size) {
+    //Constructor creating a deck of cards
+    public DeckOfCards(int size) {
         super(size);
-        this.cardSuit = suit;
-        this.cardRank = rank;
-    }
-    
-  
-    
-    public ArrayList<Card> getDeck(){
-        ArrayList<Card> deck = new ArrayList<Card>();
-        for (Suit s: Suit.values()){
-            for (Rank r : Rank.values()){
-                deck.add(new WarCard(s,r,s,r));
+
+        for (Suit s : Suit.values()) {
+            for (Rank r : Rank.values()) {
+                WarCard card = new WarCard(s, r);
+                this.add(card);
+
             }
         }
-        return deck;
     }
-    
-   
 
+    //toString Method
+    @Override
     public String toString() {
-        return (cardRank + " of " + cardSuit);
+        return this.showHand();
 
     }
-   
+
 }

@@ -14,6 +14,8 @@ import java.util.Collections;
  *
  * @author dancye
  * @author Paul Bonenfant Jan 2020
+ * Student Name: Hajra Rizvi
+ * Student Number: 991627316
  */
 public class GroupOfCards{
 
@@ -21,10 +23,25 @@ public class GroupOfCards{
     private ArrayList<Card> cards;
     private int size;//the size of the grouping
 
+    //Constructor with 1 argument 
     public GroupOfCards(int size) {
+        cards =  new ArrayList<Card>();
         this.size = size;
     }
-
+    
+    //Add method
+    public void add(Card card){
+        cards.add(card);
+    }
+    
+    //Show the current Hand
+    public String showHand(){
+        String str = "";
+        for (Card c: cards){
+            str += c.toString();
+        }
+        return str;
+    }
     /**
      * A method that will get the group of cards as an ArrayList
      *
@@ -33,6 +50,11 @@ public class GroupOfCards{
     public ArrayList<Card> getCards() {
         return cards;   
     }
+
+    public void setCards(ArrayList<Card> card) {
+        this.cards = card;
+    }
+    
 
     public void shuffle() {
         Collections.shuffle(cards);
@@ -51,5 +73,7 @@ public class GroupOfCards{
     public void setSize(int size) {
         this.size = size;
     }
+    
+    
     
 }//end class
