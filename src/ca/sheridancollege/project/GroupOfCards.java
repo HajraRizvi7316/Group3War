@@ -15,7 +15,7 @@ import java.util.Collections;
  * @author dancye
  * @author Paul Bonenfant Jan 2020
  */
-public class GroupOfCards {
+public class GroupOfCards{
 
     //The group of cards, stored in an ArrayList
     private ArrayList<Card> cards;
@@ -31,7 +31,7 @@ public class GroupOfCards {
      * @return the group of cards.
      */
     public ArrayList<Card> getCards() {
-        return cards;
+        return cards;   
     }
 
     public void shuffle() {
@@ -51,5 +51,5 @@ public class GroupOfCards {
     public void setSize(int size) {
         this.size = size;
     }
-
+    
 }//end class
