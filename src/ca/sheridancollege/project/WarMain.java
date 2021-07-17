@@ -6,7 +6,7 @@
 package ca.sheridancollege.project;
 import java.util.*;
 /**
- * Author: Hajra Rizvi 
+ * Author: Hajra Rizvi & Gurwinder Kaur 
  * Date: 07/15/2021
  */
 public class WarMain {
@@ -15,16 +15,20 @@ public class WarMain {
         
 
         
-//        DeckOfCards decks = new DeckOfCards(52);
+        DeckOfCards decks = new DeckOfCards(52);
+        GamePlay players= new GamePlay("Player1");
+        decks.shuffle();
         
-//        decks.shuffle();
-//        System.out.println(decks);
 
-        DeckOfCards d1;
-        d1 = new DeckOfCards(52);
-        System.out.println(d1.toString());
-        d1.shuffle();
-        System.out.println(d1);
+  //      DeckOfCards d1;
+  //      d1 = new DeckOfCards(52);
+      //  System.out.println(d1.toString());
+      //  d1.shuffle();
+       // System.out.println(d1);
+        
+                
+       
+        
         
         /*Things to do
         Deal the cards and keep track of who has what card

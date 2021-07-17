@@ -10,6 +10,7 @@ package ca.sheridancollege.project;
  *
  * @author dancye
  * @author Paul Bonenfant Jan 2020
+ * Author: Hajra Rizvi & Gurwinder Kaur
  */
 public abstract class Player {
 

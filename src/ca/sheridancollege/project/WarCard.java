@@ -6,7 +6,7 @@
 package ca.sheridancollege.project;
 
 /**
- * Author: Hajra Rizvi 
+ * Author: Hajra Rizvi & Gurwinder Kaur
  * Date: 07/15/2021
  */
 public class WarCard extends Card {

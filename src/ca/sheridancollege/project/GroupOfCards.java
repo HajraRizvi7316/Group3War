@@ -14,13 +14,13 @@ import java.util.Collections;
  *
  * @author dancye
  * @author Paul Bonenfant Jan 2020
- * Student Name: Hajra Rizvi
- * Student Number: 991627316
+ * Student Name: Hajra Rizvi & Gurwinder Kaur
+ * Student Number: 991627316 & 991340033
  */
 public class GroupOfCards{
 
     //The group of cards, stored in an ArrayList
-    private ArrayList<Card> cards;
+    public ArrayList<Card> cards;
     private int size;//the size of the grouping
 
     //Constructor with 1 argument 

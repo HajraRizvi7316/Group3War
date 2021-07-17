@@ -8,7 +8,8 @@ package ca.sheridancollege.project;
 import java.util.ArrayList;
 
 /**
- * Author: HajraRizvi Date:
+ * Author: HajraRizvi & Gurwinder Kaur
+ * Date:July 15, 2021
  */
 public class DeckOfCards extends GroupOfCards {
 
@@ -23,6 +24,10 @@ public class DeckOfCards extends GroupOfCards {
 
             }
         }
+    }
+    public void deal(int n) {
+        for (int i=0; i < n; ++i)
+           System.out.println(cards.get(i));
     }
 
     //toString Method

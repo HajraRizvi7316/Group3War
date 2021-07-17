@@ -6,7 +6,8 @@
 package ca.sheridancollege.project;
 
 /**
- * Author: Hajra Rizvi Date:
+ * Author: Hajra Rizvi & Gurwinder Kaur
+ * Date: July 15, 2021
  */
 public class GamePlay extends Player {
     //points each player has
