@@ -1,7 +1,11 @@
 package ca.sheridancollege.project;
 
 /**
- * Author: Hajra Rizvi Date:
+ * Author: Hajra Rizvi
+ * Date: 08/10/2021
+ * SYST17796
+ * GamePrint: This application is helper class to print out all of the messages
+ * in the game. It makes the program clean and concise. 
  */
 public class GamePrint {
 

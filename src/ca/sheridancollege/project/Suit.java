@@ -4,6 +4,7 @@ package ca.sheridancollege.project;
 /**
  * Author: Hajra Rizvi & Gurwinder Kaur
  * Date: 07/15/2021
+ * Suit: This is an enum class for the suits of cards.
  */
 
 //enum class for Suits

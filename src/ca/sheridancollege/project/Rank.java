@@ -1,15 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package ca.sheridancollege.project;
 
 /**
 * Author: Hajra Rizvi & Gurwinder Kaur
- * Date: 07/15/2021
- */
+* Date: 07/15/2021
+* Rank: This is an enum class for the ranks of a card. 
+*/
 
 //enum class for Rank
 public enum Rank {

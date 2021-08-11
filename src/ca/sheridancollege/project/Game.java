@@ -14,6 +14,8 @@ import java.util.ArrayList;
  * @author dancye
  * @author Paul Bonenfant Jan 2020
  * Hajra Rizvi & Gurwinder Kaur
+ * SYST17796 
+ * Date: 08/08/2021
  */
 public abstract class Game {
 

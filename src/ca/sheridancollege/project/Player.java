@@ -10,7 +10,9 @@ package ca.sheridancollege.project;
  * which should be unique.
  *
  * @author dancye
- * @author Paul Bonenfant Jan 2020 Author: Hajra Rizvi & Gurwinder Kaur
+ * @author Paul Bonenfant Jan 2020 
+ * Author: Hajra Rizvi & Gurwinder Kaur
+ * Date: 07/15/2021
  */
 public class Player {
 

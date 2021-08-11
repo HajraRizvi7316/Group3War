@@ -17,6 +17,9 @@ import java.util.List;
  * @author Paul Bonenfant Jan 2020
  * Student Name: Hajra Rizvi & Gurwinder Kaur
  * Student Number: 991627316 & 991340033
+ * Date: 08/08/2021
+ * GroupOfCards: This application creates a deck of cards, shuffles them, deals
+ * them and more. This class deals with any group of cards.
  */
 public class GroupOfCards{
 

@@ -11,6 +11,10 @@ import java.util.List;
 /**
  * Author: HajraRizvi & Gurwinder Kaur
  * Date:July 15, 2021
+ * SYST17796
+ * Hand: This class deals with each players deck; hand. This application includes
+ * all the functionality the game has with players decks. It has methods
+ * to add card to the bottom and top. Remove card from bottom and top and more. 
  */
 
 public class Hand{
