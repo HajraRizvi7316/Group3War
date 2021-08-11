@@ -37,8 +37,17 @@ public enum Rank {
         this.value = value;
     }
     
-
+    //return rank name value
+    public String getRankName(){
+        return this.rankName;
+    }
     
+    /*returns int from 2 to 14
+    ex Jack = 11
+    */
+    public int getValue(){
+        return this.value;
+    }    
    
     //toString method shorthand of rank
     @Override
