@@ -14,33 +14,36 @@ package ca.sheridancollege.project;
 //enum class for Rank
 public enum Rank {
     ACE("Ace", 1),
-    TWO("2", 2),
-    THREE("3", 3),
-    FOUR("4", 4),
-    FIVE("5", 5),
-    SIX("6", 6),
-    SEVEN("7", 7),
-    EIGHT("8", 8),
-    NINE("9", 9),
-    TEN("10", 10),
+    TWO("Two", 2),
+    THREE("Three", 3),
+    FOUR("Four", 4),
+    FIVE("Five", 5),
+    SIX("Six", 6),
+    SEVEN("Seven", 7),
+    EIGHT("Eigth", 8),
+    NINE("Nine", 9),
+    TEN("Eleven", 10),
     JACK("Jack", 11),
     QUEEN("Queen", 12), 
     KING("King", 13);
     
     //declare value and name
-    int value;
-    String name;
+    private int value;
+    private String rankName;
     
     //Constructor with two arguments
-    Rank(String name, int value){
-        this.name=name;
+    Rank(String rankName, int value){
+        this.rankName=rankName;
         this.value = value;
     }
     
-    //toString method
+
+    
+   
+    //toString method shorthand of rank
     @Override
     public String toString(){
-        return name;
+        return String.valueOf(this.getValue());
     }
    
 
