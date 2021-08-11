@@ -4,7 +4,11 @@ import java.util.Scanner;
 import java.util.List;
 
 /**
- * Author: Hajra Rizvi & Gurwinder Kaur Date: July 15, 2021
+ * Author: Hajra Rizvi & Gurwinder Kaur 
+ * Date: July 15, 2021
+ * SYST17796
+ * GamePlay: This application runs the game. It has the main method at the bottom.
+ * The rest of the methods are used for the play of the game.
  */
 public class GamePlay {
 
