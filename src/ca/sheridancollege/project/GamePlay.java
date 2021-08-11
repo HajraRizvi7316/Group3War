@@ -1,4 +1,3 @@
-
 package ca.sheridancollege.project;
 
 import java.util.Scanner;
@@ -92,7 +91,65 @@ public class GamePlay {
 //        System.out.println(hand);
     }
 
+    //War Game
+    public boolean war(Player playerOne, Player playerTwo, Hand handCards) {
+        //players show top card from deck, each player draws from top of deck
+        //stores cards that are in play in an array.
+        WarCard playerOneShow = playerOne.getHand().removeCardTop();
+        if (playerOneShow == null) {
+            return false;
+        }
+        WarCard playerTwoShow = playerTwo.getHand().removeCardTop();
+        if (playerTwoShow == null) {
+            return false;
+        }
 
+        //In case of war rach player adds 2 cards to handCards and the thrid card is evaluated
+        if (handCards == null) {
+            handCards = new Hand();
+        }
+
+        handCards.addCardTop(playerOneShow);
+        handCards.addCardTop(playerTwoShow);
+        int result = playerOneShow.compareTo(playerTwoShow);
+        switch (result) {
+            case 0:
+                gamePrint.warRound();
+
+                //each player adds two cards to the war hand
+                List<WarCard> playerOneWar = playerOne.getHand().take(2);
+                if (playerOneWar == null) {
+                    return false;
+                }
+
+                //add the two cards to the war hand
+                handCards.addCardsTop(playerOneWar);
+
+                //each player adds two cards to the war hand
+                List<WarCard> playerTwoWar = playerTwo.getHand().take(2);
+                if (playerTwoWar == null) {
+                    return false;
+                }
+
+                //add the two cards to the war hand
+                handCards.addCardsTop(playerTwoWar);
+
+            case 1:
+                //Give all cards on table to player 1
+                //PLayer1 adds both face up cards to the bottom of their deck
+                playerOne.getHand().AddHand(handCards);
+                gamePrint.roundWinner(playerOne, playerOneShow, playerTwo, playerTwoShow, playerOne.getName());
+                break;
+            case -1:
+                //Give all cards on table to player 2
+                //player2 adds both face up cards to the bottom of their deck
+                playerTwo.getHand().AddHand(handCards);
+                gamePrint.roundWinner(playerOne, playerOneShow, playerTwo, playerTwoShow, playerTwo.getName());
+                break;
+        }
+        return true;
+
+    }
 
     //Main
     public static void main(String[] args) {
