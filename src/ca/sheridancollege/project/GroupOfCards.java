@@ -24,7 +24,7 @@ import java.util.List;
 public class GroupOfCards{
 
     //The group of cards, stored in an ArrayList
-    private List<WarCard> cards = new ArrayList<WarCard>();
+    private List<Card> cards = new ArrayList<Card>();
     
     GroupOfCards(){
         createDeck();
@@ -35,21 +35,21 @@ public class GroupOfCards{
     public void createDeck(){
         for (Suit s: Suit.values()){
             for (Rank r : Rank.values()){
-                cards.add(new WarCard(s,r));
+                cards.add(new Card(s,r));
             }
         }
     }
 
     
     //Adds a card to the bottom of the deck, index 0 of arraylist
-    public void add(WarCard card){
+    public void add(Card card){
         this.cards.add(0, card);
     }
     
     //Show the current Hand
     public String showHand(){
         String str = "";
-        for (WarCard c: cards){
+        for (Card c: cards){
             str += c.toString();
         }
         return str;
@@ -59,11 +59,11 @@ public class GroupOfCards{
      *
      * @return the group of cards.
      */
-    public List<WarCard> getCards() {
+    public List<Card> getCards() {
         return this.cards;   
     }
 
-    public void setCards(ArrayList<WarCard> card) {
+    public void setCards(ArrayList<Card> card) {
         this.cards = card;
     }
     
@@ -79,7 +79,7 @@ public class GroupOfCards{
         return this.cards.size();
     }
     
-    public WarCard dealCard(){
+    public Card dealCard(){
         return this.cards.remove(this.cards.size() -1);
     }
 

@@ -1,30 +1,90 @@
-/**
- * SYST 17796 Project Base code.
- * Students can modify and extend to implement their game.
- * Add your name as an author and the date!
- */
 package ca.sheridancollege.project;
 
 /**
- * A class to be used as the base Card class for the project. Must be general enough to be instantiated for any Card
- * game. Students wishing to add to the code should remember to add themselves as a modifier.
- *
- * @author dancye
- * Student Name: Hajra Rizvi & Gurwinder Kaur
+ * Author: Hajra Rizvi & Gurwinder Kaur
+ Date: 07/15/2021
+ Card: This is class which initializes the cards. 
  */
-public abstract class Card {
-    //default modifier for child classes
-    /**
-     * Students should implement this method for their specific children classes
-     *
-     * @return a String representation of a card. Could be an UNO card, a regular playing card etc.
-     */
-    
-    public Card(){  
+public class Card implements Comparable<Card>{
+
+    //Define data members, Instance variable in private visibility for complete encapsulation
+    private Suit cardSuit;
+    private Rank cardRank;
+
+    //constructor with two args
+    public Card(Suit suits, Rank ranks) {
+        if (ranks == null || suits == null){
+            throw new NullPointerException();
+        }
+        this.cardSuit = suits;
+        this.cardRank = ranks;
+    }
+
+    //Getter method to getRank
+    public Rank getRank() {
+        return this.cardRank;
     }
     
+    //Setter method to set Card Rank
+    public void setRank(Rank rank) {
+        this.cardRank = rank;
+    }
+
+    //Setter method to set the Card Suit
+    public void setSuit(Suit suit) {
+        this.cardSuit = suit;
+    }
+
+
+    
+    //Getter method to get Suit
+    public Suit getSuit() {
+        return this.cardSuit;
+    }
+    
+    //ACE= A, TWO = 2
+    public String getRankLetter(){
+        return this.cardRank.toString();
+    }
+    
+    //@return Number indicating how many point the card is worth
+    public Integer getCardValue(){
+        return this.cardRank.getValue();
+    }
+    
+
+    //return 1 if value of card > other, -1 if this < other and id equal
+    public int compareTo(Card other) {
+        return this.getCardValue().compareTo(other.getCardValue());
+    }
+    
+    //return true if the suit of 2 different cards are the same
+    public boolean isSameSuit(Card other){
+        return this.cardSuit.equals(other.cardSuit);
+    }
+    
+    //return true is the rank of 2 different cards are the same
+    public boolean isSameRank(Card other){
+        return this.cardRank.equals(other.cardRank);
+    }
     
     @Override
-    public abstract String toString();
+    public boolean equals(Object obj){
+        if (obj == null){
+            return false;
+        }
+        if (!Card.class.isAssignableFrom(obj.getClass())){
+            return false;
+        }
+        final Card other = (Card) obj;
+        return this.cardSuit == other.cardSuit && this.cardRank == other.cardRank;
+        
+    }
+    
+    //toString method --> Two of Hearts
+    @Override
+    public String toString(){
+        return this.cardRank.getRankName() + " of " + this.cardSuit.getSuit();
+    }
 
 }

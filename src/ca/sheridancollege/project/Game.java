@@ -8,54 +8,21 @@ package ca.sheridancollege.project;
 import java.util.ArrayList;
 
 /**
- * The class that models your game. You should create a more specific child of this class and instantiate the methods
- * given.
+ * The class that models your game. You should create a more specific child of
+ * this class and instantiate the methods given.
  *
  * @author dancye
- * @author Paul Bonenfant Jan 2020
- * Hajra Rizvi & Gurwinder Kaur
- * SYST17796 
- * Date: 08/08/2021
+ * @author Paul Bonenfant Jan 2020 Hajra Rizvi & Gurwinder Kaur SYST17796 Date:
+ * 08/08/2021
  */
-public abstract class Game {
+public class Game {
+    //Main
 
-    private final String name;//the title of the game
-    private ArrayList<Player> players;// the players of the game
-
-    public Game(String name) {
-        this.name = name;
-        players = new ArrayList();
+    public static void main(String[] args) {
+        //Welcome to War! message
+        System.out.println("Welcome to War Card Game!");
+        GamePlay game = new GamePlay();
+        game.startGame();
     }
-
-    /**
-     * @return the name
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * @return the players of this game
-     */
-    public ArrayList<Player> getPlayers() {
-        return players;
-    }
-
-    /**
-     * @param players the players of this game
-     */
-    public void setPlayers(ArrayList<Player> players) {
-        this.players = players;
-    }
-
-    /**
-     * Play the game. This might be one method or many method calls depending on your game.
-     */
-    public abstract void play();
-
-    /**
-     * When the game is over, use this method to declare and display a winning player.
-     */
-    public abstract void declareWinner();
 
 }//end class

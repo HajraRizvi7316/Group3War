@@ -29,7 +29,7 @@ public class GamePrint {
     }
 
     //Print out winnings for each round and final winner of game.
-    public void roundWinner(Player player1, WarCard card1, Player player2, WarCard card2, String winner) {
+    public void roundWinner(Player player1, Card card1, Player player2, Card card2, String winner) {
         System.out.printf("%-20s %-20s %-20s %-20s %s is winner.\n", card1.toString(), player1.getHand().handSize(), card2.toString(), player2.getHand().handSize(), winner);
     }
 

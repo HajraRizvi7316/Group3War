@@ -99,11 +99,11 @@ public class GamePlay {
     public boolean war(Player playerOne, Player playerTwo, Hand handCards) {
         //players show top card from deck, each player draws from top of deck
         //stores cards that are in play in an array.
-        WarCard playerOneShow = playerOne.getHand().removeCardTop();
+        Card playerOneShow = playerOne.getHand().removeCardTop();
         if (playerOneShow == null) {
             return false;
         }
-        WarCard playerTwoShow = playerTwo.getHand().removeCardTop();
+        Card playerTwoShow = playerTwo.getHand().removeCardTop();
         if (playerTwoShow == null) {
             return false;
         }
@@ -121,7 +121,7 @@ public class GamePlay {
                 gamePrint.warRound();
 
                 //each player adds two cards to the war hand
-                List<WarCard> playerOneWar = playerOne.getHand().take(2);
+                List<Card> playerOneWar = playerOne.getHand().take(2);
                 if (playerOneWar == null) {
                     return false;
                 }
@@ -130,7 +130,7 @@ public class GamePlay {
                 handCards.addCardsTop(playerOneWar);
 
                 //each player adds two cards to the war hand
-                List<WarCard> playerTwoWar = playerTwo.getHand().take(2);
+                List<Card> playerTwoWar = playerTwo.getHand().take(2);
                 if (playerTwoWar == null) {
                     return false;
                 }
@@ -155,12 +155,5 @@ public class GamePlay {
 
     }
 
-    //Main
-    public static void main(String[] args) {
-        //Welcome to War! message
-        System.out.println("Welcome to War Card Game!");
-        GamePlay game = new GamePlay();
-        game.startGame();
-    }
 
 }

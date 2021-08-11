@@ -19,19 +19,19 @@ import java.util.List;
 
 public class Hand{
         //player individual cards
-    private List<WarCard> cards; 
+    private List<Card> cards; 
     
     //no arg constructor
     public Hand(){
-        this.cards = new ArrayList<WarCard>();
+        this.cards = new ArrayList<Card>();
     }
     
     //take N cards out
-    public List<WarCard> take(int numCard){
+    public List<Card> take(int numCard){
         if (numCard > this.handSize()){
             return null;
         }
-        List<WarCard> away = new ArrayList<>();
+        List<Card> away = new ArrayList<>();
         for(int i = 0; i< numCard; i++){
             away.add(this.cards.remove(this.handSize()-1));
         }
@@ -42,13 +42,13 @@ public class Hand{
      * Add cards from one hand to another
      */
     public void AddHand(Hand other){
-        for (WarCard card : other.cards){
+        for (Card card : other.cards){
             this.addCardBottom(card);
         }
     }
     
     //single Card object added to end of Array
-    public void addCardTop(WarCard card){
+    public void addCardTop(Card card){
         if (card==null){
             throw new NullPointerException("Can't add a null card to cards!");
         }
@@ -56,17 +56,17 @@ public class Hand{
     }
     
     //more than one card added to to the array
-    public void addCardsTop(List<WarCard> cs){
+    public void addCardsTop(List<Card> cs){
         this.cards.addAll(cs);
     }
     
     //adds Card object at the beginning of the array
-    public void addCardBottom(WarCard card){
+    public void addCardBottom(Card card){
         cards.add(0, card);
     }
     
     //removes card from the last index of the array
-    public WarCard removeCardTop(){
+    public Card removeCardTop(){
         if (handSize() < 1){
             return null;
         }
@@ -74,7 +74,7 @@ public class Hand{
     }
     
     //removes card from the first index of the array
-    public WarCard removeCardBottom(){
+    public Card removeCardBottom(){
         if (handSize() <1){
             return null;
         }
