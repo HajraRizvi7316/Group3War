@@ -12,8 +12,8 @@ import java.util.ArrayList;
  * this class and instantiate the methods given.
  *
  * @author dancye
- * @author Paul Bonenfant Jan 2020 Hajra Rizvi & Gurwinder Kaur SYST17796 Date:
- * 08/08/2021
+ * @author Paul Bonenfant Jan 2020 Hajra Rizvi & Gurwinder Kaur SYST17796 
+ * Date:08/08/2021
  */
 public class Game {
     //Main

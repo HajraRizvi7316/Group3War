@@ -16,7 +16,8 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author gagan
+ * Student Name: Hajra Rizvi & Gurwinder Kaur
+ * Date: 07/15/2021
  */
 public class CardTest {
 
